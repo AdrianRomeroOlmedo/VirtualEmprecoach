@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#123c3c">
+  <title>Virtual EmpreCoach</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="shell">
+    <header>
+      <div class="brand"><span class="brand-mark" aria-hidden="true">V</span><span>Virtual <strong>EmpreCoach</strong></span></div>
+      <button id="clear" class="secondary" type="button">Nueva conversación</button>
+    </header>
+    <main>
+      <section class="intro">
+        <p class="eyebrow">TU ESPACIO DE APRENDIZAJE</p>
+        <h1>Las buenas ideas empiezan con una pregunta.</h1>
+        <p>Explora tus dudas sobre emprendimiento con respuestas basadas en los documentos disponibles.</p>
+      </section>
+      <section class="chat" aria-label="Conversación">
+        <div class="chat-heading"><span class="status-dot"></span><strong>Asistente de emprendimiento</strong><span class="badge">Prototipo</span></div>
+        <div id="messages" class="messages" role="log" aria-live="polite" aria-label="Mensajes">
+          <div class="welcome"><span aria-hidden="true">✦</span><h2>¿En qué podemos avanzar hoy?</h2><p>Haz una pregunta y consulta los fragmentos utilizados en la respuesta.</p></div>
+        </div>
+        <div id="error" class="error" role="alert" hidden></div>
+        <form id="chat-form">
+          <label for="question">Tu pregunta</label>
+          <div class="input-row">
+            <textarea id="question" rows="2" maxlength="2000" placeholder="Por ejemplo: ¿cómo puedo validar mi idea?" required></textarea>
+            <button id="send" type="submit">Enviar <span aria-hidden="true">↗</span></button>
+          </div>
+          <p class="hint">No incluyas datos personales ni información confidencial. Las respuestas pueden contener errores.</p>
+        </form>
+      </section>
+      <p class="privacy">La conversación permanece en esta pestaña hasta que la borres o la cierres. El servidor local procesa los mensajes; no se guardan deliberadamente ni se envían a buscadores externos.</p>
+    </main>
+    <footer>Virtual EmpreCoach · Prototipo de aprendizaje</footer>
+  </div>
+  <script src="/static/app.js" defer></script>
+</body>
+</html>
